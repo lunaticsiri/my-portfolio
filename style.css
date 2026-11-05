@@ -1,0 +1,270 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101426;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #191f38;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: #a78bfa;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Home Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero h2 {
+    color: #c4b5fd;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6d28d9;
+    transform: translateY(-3px);
+}
+
+/* Common Sections */
+.section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: #a78bfa;
+    margin-bottom: 35px;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content div {
+    max-width: 550px;
+}
+
+.about-content p {
+    margin-top: 12px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #202943;
+    padding: 18px 30px;
+    border-radius: 8px;
+    border: 1px solid #8b5cf6;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background-color: #6d28d9;
+    transform: translateY(-5px);
+}
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card,
+.achievement-card {
+    background-color: #202943;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #343e5e;
+    transition: 0.3s;
+}
+
+.project-card:hover,
+.achievement-card:hover {
+    transform: translateY(-8px);
+    border-color: #a78bfa;
+}
+
+.project-card h3,
+.achievement-card h3 {
+    color: #c4b5fd;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 500px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #202943;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#form-status {
+    color: #c4b5fd;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #191f38;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
